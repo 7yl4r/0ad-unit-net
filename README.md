@@ -1,2 +1,4 @@
 # 0ad-unit-net
-network display of counters between units in 0ad
+Network display of unit interactions between unit types in [0ad](https://play0ad.com/).
+
+![screenshot](screenshot.png)

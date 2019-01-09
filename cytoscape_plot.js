@@ -14,7 +14,7 @@ cytoscape({
         'width': '60px',
         'height': '60px',
         'content': 'data(id)',
-        'pie-size': '80%',
+        'pie-size': '90%',
         'pie-1-background-color': get_civ_mapdata("Athenians"),
         'pie-1-background-size': `${CIV_PERCENT}`,
         'pie-2-background-color': get_civ_mapdata("Britons"),
@@ -66,7 +66,13 @@ cytoscape({
         edges: COUNTER_BY_EDGES
     },
     layout: {
-        name: 'circle',
+        // name: 'concentric',
+        // minNodeSpacing: 50,
+        name: 'cose',
+        nodeOverlap: 1E100,  // ;D
+        // componentSpacing: 40,
+        // nestingFactor: 1.2,
+        // gravity: 1,
         padding: 10
     },
     ready: function(){
