@@ -4,9 +4,6 @@ ALL_CIVS = [
     "Seleucids", "Spartans"
 ]
 ALL_CIV_STR = "Athenians, Britons, Carthaginians, Gauls, Iberians, Macedonians, Mauryans, Persians, Ptolemies, Romans, Seleucids, Spartans"
-N_CIVS = ALL_CIVS.length - 1  // 12
-CIV_PERCENT = 100.0/N_CIVS
-EMPTY_COLOR = "white"
 CIV_COLOR = {
     Athenians: "blue",
     Britons: "cyan",
@@ -146,6 +143,10 @@ COUNTER_BY_EDGES = [
     { data: { id: 'eleph_cavsw', weight: 1, source: 'War Elephant', target: 'Infantry Skirmishers' } },
 ]
 
+N_CIVS = ALL_CIVS.length - 1  // 12
+CIV_PERCENT = 100.0/N_CIVS
+EMPTY_COLOR = "white"
+
 function get_civ_mapdata(civname){
     return `mapData(${civname}, 0, 1, ${EMPTY_COLOR}, ${CIV_COLOR[civname]})`
 }
@@ -187,9 +188,9 @@ cytoscape({
     .selector('edge')
       .css({
         'curve-style': 'bezier',
-        'width': 4,
+        'width': 5,
         'target-arrow-shape': 'triangle',
-        'opacity': 0.5
+        'opacity': 0.9
       })
     .selector(':selected')
       .css({
