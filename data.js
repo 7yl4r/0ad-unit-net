@@ -62,14 +62,14 @@ UNITS = [
         'Cavalry Swordsman',
         'Persians, Celts, Britons, Gauls, Hellenes, Athenians, Carthaginians, Mauryans',
     )},
-    { data: make_unit_data(
-        'Female Citizen',
-        ALL_CIV_STR,
-    )},
-    { data: make_unit_data(
-        'Healer',
-        ALL_CIV_STR,
-    )},
+    // { data: make_unit_data(
+    //     'Female Citizen',
+    //     ALL_CIV_STR,
+    // )},
+    // { data: make_unit_data(
+    //     'Healer',
+    //     ALL_CIV_STR,
+    // )},
     { data: make_unit_data(
         'Infantry Archer',
         'Carthaginians, Hellenes, Athenians, Macedonians, Mauryans, Persians, Ptolemies, Seleucids',
@@ -126,8 +126,8 @@ COUNTER_BY_EDGES = [
     { data: { id: 'cavsw_infsp', weight: 1, source: 'Cavalry Swordsman', target: 'Infantry Spearman' } },
     { data: { id: 'cavsp_cavsk', weight: 1, source: 'Cavalry Swordsman', target: 'Cavalry Skirmisher' } },
     { data: { id: 'cavsp_cavsk', weight: 1, source: 'Cavalry Swordsman', target: 'War Elephant' } },
-    { data: { id: 'fem_cavsw', weight: 1, source: 'Female Citizen', target: 'Cavalry Swordsman' } },
-    { data: { id: 'heal_cavsw', weight: 1, source: 'Healer', target: 'Cavalry Swordsman' } },
+    // { data: { id: 'fem_cavsw', weight: 1, source: 'Female Citizen', target: 'Cavalry Swordsman' } },
+    // { data: { id: 'heal_cavsw', weight: 1, source: 'Healer', target: 'Cavalry Swordsman' } },
     { data: { id: 'infar_cavsk', weight: 1, source: 'Infantry Archer', target: 'Cavalry Skirmisher' } },
     { data: { id: 'infar_cavsw', weight: 1, source: 'Infantry Archer', target: 'Cavalry Swordsman' } },
     { data: { id: 'infsk_infsw', weight: 1, source: 'Infantry Skirmisher', target: 'Infantry Swordsman' } },
