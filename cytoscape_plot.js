@@ -1,4 +1,3 @@
-N_CIVS = ALL_CIVS.length - 1  // 12
 CIV_PERCENT = 100.0/N_CIVS
 EMPTY_COLOR = "white"
 
@@ -11,8 +10,10 @@ cytoscape({
   style: cytoscape.stylesheet()
     .selector('node')
       .css({
-        'width': '60px',
-        'height': '60px',
+        "width": `mapData(civ_count, 0, ${N_CIVS}, 30, 90)`,
+        "height": `mapData(civ_count, 0, ${N_CIVS}, 30, 90)`,
+        // 'width': '60px',
+        // 'height': '60px',
         'content': 'data(id)',
         'pie-size': '90%',
         'pie-1-background-color': get_civ_mapdata("Athenians"),
@@ -69,7 +70,7 @@ cytoscape({
         // name: 'concentric',
         // minNodeSpacing: 50,
         name: 'cose',
-        nodeOverlap: 1E100,  // ;D
+        // nodeOverlap: 10,
         // componentSpacing: 40,
         // nestingFactor: 1.2,
         // gravity: 1,

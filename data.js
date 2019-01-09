@@ -4,6 +4,7 @@ ALL_CIVS = [
     "Seleucids", "Spartans"
 ]
 ALL_CIV_STR = "Athenians, Britons, Carthaginians, Gauls, Iberians, Macedonians, Mauryans, Persians, Ptolemies, Romans, Seleucids, Spartans"
+N_CIVS = ALL_CIVS.length - 1  // 12
 CIV_COLOR = {
     Athenians: "blue",
     Britons: "cyan",
@@ -27,12 +28,16 @@ function make_unit_data(id, civ_list_str){
     civ_list_str.split(',').forEach(function(civ_substr){
         dat[civ_substr.trim()] = 1
     });
+    civ_count = N_CIVS
     // now add civs not in the list
     ALL_CIVS.forEach(function(civname) {
         if (dat[civname] != 1){
             dat[civname] = 0
+            civ_count -= 1
         }
     });
+    dat['civ_count'] = civ_count
+    console.log(dat)
     return dat
 }
 
